@@ -220,4 +220,4 @@ if __name__ == '__main__':
 
     print('Students have been created.')
     print('Running Flask app...')
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
