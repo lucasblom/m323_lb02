@@ -1,4 +1,4 @@
-from flask import Flask, redirect, request
+from flask import Flask, request
 from student import Student
 from A.factorial_pure import factorial
 from A.immutable_function import immutable
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 
 def check_if_student_id_is_valid(student_id):
-    if type(student_id) != int:
+    if isinstance(student_id, str):
         raise ValueError('Please enter a number!')
     if student_id > len(students):
         raise ValueError('Student not found!')
