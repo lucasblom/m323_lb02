@@ -36,6 +36,11 @@ def check_if_list_is_greater_than_2(lst):
             raise ValueError(str(error))
 
 
+@app.route('/')
+def index():
+    return 'Welcome to the main page :)'
+
+
 @app.route('/a1g')
 def pure_function():
     try:
